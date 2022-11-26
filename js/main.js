@@ -2,6 +2,8 @@ import { SendMail } from "./components/mailer.js";
 
 (() => {
 
+    let fields = JSON.parse(result.message).message;
+
    const ffname=document.getElementById("firstname"),
          flname=document.getElementById("lastname"),
          femail=document.getElementById("email"),
