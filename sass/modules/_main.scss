@@ -7,6 +7,10 @@ body {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
 
     h2 { 
@@ -19,7 +23,7 @@ main {
     hr { 
         width: 50%; 
         border: 1px solid $heading-color; 
-        margin: 40px 35em; 
+        margin: 40px 20em; 
     }
 
     p { max-width: 75%; }
@@ -31,13 +35,9 @@ main {
         }
 
         #mail-form   {
-            margin-left: 60rem;
+            margin-left: 15rem;
             //margin-top: 5em;
             display: flex;
             flex-direction: column;
             //align-items: center;
         }  
-
-        .mail-header{
-            margin-left: 59.5rem;
-        }

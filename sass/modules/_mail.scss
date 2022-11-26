@@ -11,8 +11,8 @@ label {
 }
 
 input[type=text], input[type=email], input[type=tel], textarea {
-    padding: 0.6em;
-    color: rgb(91, 44, 222);
+    padding: 0.9em;
+    color: rgb(222, 118, 44);
     border-radius: 4px;
     width: 250px;
 }
@@ -22,13 +22,13 @@ input[type=submit] {
     margin-top: 2em;
     padding: 0.75rem 3.3rem 0.75rem 0.75rem;
     border-radius: 0.5rem;
-    background-color: #78abeb;
+    background-color: #e1761e;
     cursor: pointer;
     font-size: 1.2em;
     color: rgb(60, 57, 57);
     font-weight: bolder;
 
-    &:hover { background-color: #5588c8}
+    &:hover { background-color: #e83e0f}
 }
 
 .wrapper {
