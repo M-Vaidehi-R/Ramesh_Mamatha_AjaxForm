@@ -20,7 +20,7 @@ import { SendMail } from "./components/mailer.js";
                 ErrorMessage: false,
 
                 form: {
-                    firstname: "",
+                    firstname: ffname.value,
                     lastname: "",
                     email: "",
                     text: ""
