@@ -19,7 +19,7 @@ if($_POST){  //main if-else
     if(isset($_POST['firstname']) && !empty($_POST['firstname'])) {    //make sure its set and not empty
         $visitor_name = filter_var($_POST['firstname'],FILTER_SANITIZE_STRING);
 
-    }else{
+    }else {
  
         array_push($fail, "firstname");
     }
@@ -60,7 +60,6 @@ if($_POST){  //main if-else
     $headers = 'From: '.$visitor_email."\r\n" .'Reply-to: '.$visitor_email."\r\n" .'X-Mailer: PHP/' .phpversion();
 
     if(count($fail)==0){
-        echo "its working";
         mail($receipent, $subject, $message, $headers);
         $results['message'] = sprintf("Thank you for contacting us, %s . We will respond within 24 hours.", $visitor_name);    //%s => tells php thats its refering to a variable at the end
     }else{
@@ -70,7 +69,7 @@ if($_POST){  //main if-else
 
 
 }else{   // main if else
-    $results['message'] = "Stop being so damn lazy and fill out the form.";
+    $results['message'] = "There are empty fields in the form";
 }
 
 echo json_encode($results);

@@ -15,36 +15,20 @@
 
         <h2 class="mail-header">Contact Form</h2>
 
-        <form action="../week10/includes/send.php" method="POST" id="mail-form">  <!--post, variable which is used to collect data, it goes to send.php/action-->
+        <form action="includes/send.php" method="POST" id="mail-form">  <!--post, variable which is used to collect data, it goes to send.php/action-->
             
             
             <label for="firstname">First Name</label>
-            <input ref="fname" type="text" id="firstname" name="firstname" required="required">
-            <div v-if="ErrorFname">
-                <p>Enter your First Name</p>
-            </div>
-
+            <input ref="firstname" type="text" id="firstname" name="firstname" required>
 
             <label for="lastname">Last Name</label>
-            <input ref="lname" type="text" id="lastname" name="lastname" required>
-            <div v-if="ErrorLname">
-                <p>Enter your Last Name</p>
-            </div>
-
+            <input ref="lastname" type="text" id="lastname" name="lastname" required>
 
             <label for="email">Email</label>
             <input ref="email" type="email" id="email" name="email" required>
-            <div v-if="ErrorEmail">
-                <p>Enter a valid Email Id</p>
-            </div>
 
-
-            <label for="message">Your Message</label>
+             <label for="message">Your Message</label>
             <textarea ref="message" name="message" id="message" cols="30" rows="10"></textarea>
-            <div v-if="ErrorMessage">
-                <p>Enter your Message</p>
-            </div>
-
 
             <label for="phone">Your Phone # <i>(optional)</i></label>
             <input ref="phone" type="tel" value="tel" name="phone">
