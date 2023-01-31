@@ -36,13 +36,18 @@
             <div class="wrapper">
                 <input @click.prevent="processMail" type="submit" class="submit" value="Go!">
             </div>    
-
-            <div class="success" v-if="successMessage">
-                <p>your message has been sent succesfully</p>
-            </div>
             
         </form>
     </main>
+
+            <!--FORM ENDS HERE :)-->
+
+            <div class="msg-error">
+                <p>Oopsiee...you missed out a column or so.</p>
+            </div>
+            <div class="msg-success">
+                <p>Mail sent successfully, you will be contacted within 24 hours. </p>
+            </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/main.js" type="module" defer></script>

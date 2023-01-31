@@ -44,3 +44,20 @@ input[type=submit] {
 }
 
 textarea { resize: none; display: block; }
+
+.msg-error {
+    color: red;
+    font-size: 1.5em;
+    margin-top: 1em;
+    opacity: 0;
+}
+.msg-success {
+    color: rgb(0, 220, 11);
+    font-size: 1.5em;
+    margin-top: 1em;
+    opacity: 0;
+}
+
+.display{
+    opacity: 1;
+}

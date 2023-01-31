@@ -15,29 +15,20 @@ import { SendMail } from "./components/mailer.js";
 
         methods: {
             processMailFailure(result) {
-                // show a failure message in the UI
-                // use this.$refs to connect to the elements on the page and mark any empty fields/inputs with an error class
-                //alert('failure! and if you keep using an alert, DOUBLE failure!');
-                //For first name
 
-                let fields = JSON.parse(result.message).message;
-                console.log(fields);
-                //this.$refs.fields.classList.add("error");
-                let len=fields.length;
-                    for(let i=0;i<len;i++){
-                        this.$refs.fields[i].classList.add("error");
-                    }   
-                // show some errors in the UI here to let the user know the mail attempt was successful*/
+                let error = document.querySelector('.msg-error');
+                error.classList.add("display");
+                let success = document.querySelector('.msg-success');
+                success.classList.remove("display");
+
             },
 
             processMailSuccess(result) {
-                let fields = JSON.parse(result.message).message;
-                while(fields==0){
-                    this.successMessage=true;
-                }
-                // show a success message in the UI
-                //alert("success! but don't EVER use alerts. They are gross.");        
-                // show some UI here to let the user know the mail attempt was successful
+
+                let success = document.querySelector('.msg-success');
+                success.classList.add("display");
+                let error = document.querySelector('.msg-error');
+                error.classList.remove("display");
             },
 
             processMail(event) {        
